@@ -15,6 +15,7 @@ models:
   mistral12b_model: "ollama/mistral-nemo:12b-instruct-2407-q3_K_M"  # resource-intensive
   mistral_nemo_12b_instruct_2407_q8_0: "ollama/mistral-nemo:12b-instruct-2407-q8_0"  # resource-intensive
   mistral_nemo_12b_instruct_2407_q5_K_S: "ollama/mistral-nemo:12b-instruct-2407-q5_K_S"
+  lmstudio_meta_llama_3_1_8b_instruct: "lmstudio-community/Meta-Llama-3.1-8B-Instruct-GGUF"
 embeddings:
   provider: "ollama"
   config:
