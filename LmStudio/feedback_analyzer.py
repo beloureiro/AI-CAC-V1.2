@@ -1,6 +1,6 @@
 import os
-from datetime import datetime  # Adiciona a biblioteca para trabalhar com data e hora
-from utils import load_yaml_file, load_feedback, send_request
+import time  # Adicionando para medição de tempo
+from utils import load_yaml_file, load_feedback, send_request, save_results_to_md
 
 class FeedbackAnalyzer:
     def __init__(self, config_path, feedback_path, agents_path):
@@ -49,31 +49,13 @@ class FeedbackAnalyzer:
         
         return results
 
-    def save_results_to_md(self, results):
-        # Pega a data e hora atuais
-        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-        # Define o caminho do arquivo .md com base na pasta especificada e no formato "report_data_hora.md"
-        md_file_path = os.path.join(
-            "D:/OneDrive - InMotion - Consulting/AI Projects/AI-CAC-V1.2/LmStudio/lms_reports_md", 
-            f'report_{current_time}.md'
-        )
-
-        # Abrir o arquivo em modo de escrita (criar ou sobrescrever)
-        with open(md_file_path, 'w', encoding='utf-8') as file:
-            file.write("# Feedback Analysis Report\n\n")
-            file.write("This report contains the analysis results for each expert agent based on the patient's feedback.\n\n")
-            
-            for agent, result in results.items():
-                file.write(f"## {agent}\n\n")
-                file.write(f"```\n{result}\n```\n\n")
-
-        print(f"Results saved to {md_file_path}")
-
 # Caminhos dos arquivos
 config_path = "config/local_llm.yaml"
 feedback_path = "D:/OneDrive - InMotion - Consulting/AI Projects/AI-CAC-V1.2/patient_feedback.txt"
 agents_path = "LmStudio/lm_agents.yaml"
+
+# Medir o tempo de início
+start_time = time.time()
 
 # Instanciar o analisador de feedback
 analyzer = FeedbackAnalyzer(config_path, feedback_path, agents_path)
@@ -82,4 +64,21 @@ analyzer = FeedbackAnalyzer(config_path, feedback_path, agents_path)
 resultados = analyzer.run_analysis()
 
 # Salvar os resultados no arquivo .md
-analyzer.save_results_to_md(resultados)
+save_results_to_md(resultados)
+
+# Medir o tempo de término
+end_time = time.time()
+
+# Calcular o tempo total
+execution_time = end_time - start_time
+
+# Converter para minutos e segundos
+minutes, seconds = divmod(execution_time, 60)
+execution_message = f"Total execution time: {int(minutes)} minutes and {int(seconds)} seconds."
+
+# Imprimir o tempo total no console
+print(execution_message)
+
+# Adicionar o tempo de execução no final do arquivo .md
+with open("D:/OneDrive - InMotion - Consulting/AI Projects/AI-CAC-V1.2/LmStudio/lms_reports_md/report.md", "a", encoding='utf-8') as file:
+    file.write(f"\n{execution_message}")

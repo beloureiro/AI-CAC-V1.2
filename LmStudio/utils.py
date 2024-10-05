@@ -1,6 +1,8 @@
 import requests
 import json
 import yaml
+import os
+from datetime import datetime
 
 def load_yaml_file(filepath):
     """Carregar arquivos YAML."""
@@ -32,3 +34,25 @@ def send_request(url, headers, model, prompt, max_tokens, temperature):
         print(f"Erro: {response.status_code}")
         print(response.text)
         return None
+
+def save_results_to_md(results):
+    """Salvar os resultados da análise em um arquivo Markdown."""
+    # Pega a data e hora atuais
+    current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # Define o caminho do arquivo .md com base na pasta especificada e no formato "report_data_hora.md"
+    md_file_path = os.path.join(
+        "D:/OneDrive - InMotion - Consulting/AI Projects/AI-CAC-V1.2/LmStudio/lms_reports_md", 
+        f'report_{current_time}.md'
+    )
+
+    # Abrir o arquivo em modo de escrita (criar ou sobrescrever)
+    with open(md_file_path, 'w', encoding='utf-8') as file:
+        file.write("# Feedback Analysis Report\n\n")
+        file.write("This report contains the analysis results for each expert agent based on the patient's feedback.\n\n")
+        
+        for agent, result in results.items():
+            file.write(f"## {agent}\n\n")
+            file.write(f"```\n{result}\n```\n\n")
+
+    print(f"Results saved to {md_file_path}")
