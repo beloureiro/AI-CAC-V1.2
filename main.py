@@ -1,11 +1,12 @@
 import time
-from Crews.Advisory.crew_advisory import ai_clinical_crew
+import os
+from crew_advisory import ai_clinical_crew
 from utils import (
     log_model_usage, get_patient_feedback, log_all_models, 
     format_task_descriptions, execute_agents, 
     save_consolidated_report, save_agent_results_as_json  # Importa a função de salvar JSON
 )
-from Dashboard.Db_integration import DbIntegration  # Importe a nova classe
+from Db_integration import DbIntegration  # Importe a nova classe
 
 def execute_crew():
     start_time = time.time()  # Início da execução
@@ -43,19 +44,25 @@ def execute_crew():
     print("############################\n")
     print(f"Patient Feedback: {patient_feedback}\n")
 
-    # Salva o relatório consolidado em um arquivo de texto e obtém o nome do arquivo gerado
-    report_file_name = save_consolidated_report(patient_feedback, result.tasks_output, total_duration)
-    print(f"Report saved as: {report_file_name}")  # Exibe o nome do arquivo TXT gerado
+    # Usa caminhos relativos para os diretórios
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    txt_directory = os.path.join(base_dir, "data_reports_txt")
+    json_directory = os.path.join(base_dir, "data_reports_json")
 
-    # **NOVO: Salva o relatório consolidado em um arquivo JSON**
-    report_json_name = save_agent_results_as_json(patient_feedback, result.tasks_output, total_duration)
-    print(f"Report saved as JSON: {report_json_name}")  # Exibe o nome do arquivo JSON gerado
+    # Garante que os diretórios existam
+    os.makedirs(txt_directory, exist_ok=True)
+    os.makedirs(json_directory, exist_ok=True)
 
-    # Adicione estas linhas para processar o JSON e atualizar o CSV
-    json_directory = "D:\\OneDrive - InMotion - Consulting\\AI Projects\\AI-Clinical-Advisory-Crew\\data_reports_json"
-    csv_output_path = "D:\\OneDrive - InMotion - Consulting\\AI Projects\\AI-Clinical-Advisory-Crew\\DB\\consolidated_patient_feedback.csv"
-    
-    db_integration = DbIntegration(json_directory, csv_output_path)
+    # Salva o relatório consolidado em um arquivo de texto
+    report_file_name = save_consolidated_report(patient_feedback, result.tasks_output, total_duration, txt_directory)
+    print(f"Report saved as: {report_file_name}")
+
+    # Salva o relatório consolidado em um arquivo JSON
+    report_json_name = save_agent_results_as_json(patient_feedback, result.tasks_output, total_duration, json_directory)
+    print(f"Report saved as JSON: {report_json_name}")
+
+    # Processa os arquivos JSON
+    db_integration = DbIntegration(json_directory)
     db_integration.process_multiple_jsons()
 
 if __name__ == "__main__":

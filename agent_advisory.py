@@ -1,5 +1,5 @@
 from crewai import Agent
-from config.config_ollama import qwen2_5_7b_instruct_q8_0, gemma2_9b_instruct_q5_K_S,llama_3_1_8b_instruct_q8_0,llama_3_1_8b_instruct_q5_K_S,phi3_5_3_8b_mini_instruct_q8_0, gemma2_9b_instruct_q8_0
+from config_ollama import llama3_2_3b_instruct_q5_K_S
 from utils import log_model_usage  # Agora importado do utils
 #from .agent_tools import HealthITProcessExpertOutputValidatorTool, ClinicalPsychologistOutputValidatorTool, HealthITProcessExpertAgent
 
@@ -9,13 +9,14 @@ from utils import log_model_usage  # Agora importado do utils
 # Ajuste sugerido para stop sequences
 stop_sequences = ["<|endoftext|>"]
 
+llm_model=llama3_2_3b_instruct_q5_K_S
 
 # Agent 1: Patient Experience Expert
 patient_experience_agent = Agent(
     role="Patient Experience Expert",
     goal="Analyze patient feedback and develop concise reports on patient experience, including key issues, emotional intensity, sentiment, and urgency.",
     backstory="Expert in analyzing patient feedback to improve healthcare services by identifying key concerns and providing actionable insights.",
-    llm=llama_3_1_8b_instruct_q8_0,
+    llm=llm_model,
     inputs=["feedback"],
     system_prompt=(
         "You are a Patient Experience Expert. Your task is to analyze patient feedback based on the input provided."
@@ -40,7 +41,7 @@ process_expert_agent = Agent(
         "Do not infer additional steps or details not mentioned in the feedback. Ensure that your analysis reflects the patient’s experience, regardless of whether it aligns with a typical process flow."
     ),
     backstory="An expert in healthcare process management, IT optimization, and Business Process Model and Notation (BPMN).",
-    llm=gemma2_9b_instruct_q5_K_S,
+    llm=llm_model,
     inputs=["feedback"],
     system_prompt=(
         "You are a Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN). Your task is to map the patient's journey strictly based on the feedback provided, reflecting the specific tone (positive, negative, or neutral) without assuming any additional steps or inserting details not mentioned. "
@@ -86,7 +87,7 @@ clinical_psychologist_agent = Agent(
     role="Clinical Psychologist",
     goal="Analyze patient emotions and develop psychological support strategies.",
     backstory="Expert in understanding and addressing the emotional state of patients.",
-    llm=qwen2_5_7b_instruct_q8_0,
+    llm=llm_model,
     inputs=["feedback"],
     system_prompt=(
         "You are a Clinical Psychologist. Your task is to analyze the patient's emotional state based on the feedback provided. "
@@ -111,7 +112,7 @@ communication_expert_agent = Agent(
     role="Communication Expert",
     goal="Assess communication quality and suggest improvements.",
     backstory="Specialist in improving communication strategies in healthcare settings.",
-    llm=gemma2_9b_instruct_q8_0,
+    llm=llm_model,
     inputs=["feedback"],
     system_prompt=(
         "You are a Communication Expert. Your task is to evaluate the communication quality based on the patient's feedback, identify issues, and suggest improvements. "
@@ -130,7 +131,7 @@ manager_agent = Agent(
     role="Manager and Advisor",
     goal="Develop a concise report by consolidating and filtering expert feedback.",
     backstory="Oversees and integrates inputs from different healthcare experts into actionable recommendations, ensuring no redundancies.",
-    llm=llama_3_1_8b_instruct_q5_K_S,
+    llm=llm_model,
     inputs=["feedback"],
     system_prompt=(
         "You are a Manager and Advisor. Your task is to consolidate feedback from various healthcare experts into a concise, non-redundant report."

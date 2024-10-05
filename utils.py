@@ -250,7 +250,7 @@ def execute_agents(tasks_output):
         print(f"Agent {agent_name} took {agent_duration:.2f} seconds.\n")
 
 
-def save_consolidated_report(patient_feedback, tasks_output, total_duration):
+def save_consolidated_report(patient_feedback, tasks_output, total_duration, directory):
     """
     Gera um relatório consolidado e o salva em um arquivo de texto na pasta 'agents'
     com o nome baseado na data e hora. O nome do arquivo será usado como ID para uma base de dados.
@@ -302,4 +302,4 @@ def save_consolidated_report(patient_feedback, tasks_output, total_duration):
         report_file.write("AI Clinical Advisory Crew framework, beyond providing technical analyses, acts as a strategic driver, steering managerial decisions across various operational areas.\n")
         report_file.write("The reader is responsible for validating the feasibility of the suggested actions and their alignment with stakeholder objectives.\n")
 
-    return file_name  # Retorna o nome do arquivo que pode ser usado como ID para a base de dados
+    return file_path  # Retorna o nome do arquivo que pode ser usado como ID para a base de dados
