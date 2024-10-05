@@ -56,3 +56,6 @@ def save_results_to_md(results):
             file.write(f"```\n{result}\n```\n\n")
 
     print(f"Results saved to {md_file_path}")
+    
+    # Retorna o caminho do arquivo para uso posterior
+    return md_file_path

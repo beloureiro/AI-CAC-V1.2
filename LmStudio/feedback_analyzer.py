@@ -15,7 +15,7 @@ class FeedbackAnalyzer:
 
         # Configurações da API do modelo
         self.url = self.config['server']['url']
-        self.model = self.config['request']['model']['gemma-2-9b-it-GGUF']
+        self.model = self.config['request']['model']['Meta-Llama-3.1-8B-Instruct-GGUF']
         self.headers = {"Content-Type": "application/json"}
 
     def analyze_with_agent(self, agent_prompt, max_tokens, temperature):
@@ -63,8 +63,8 @@ analyzer = FeedbackAnalyzer(config_path, feedback_path, agents_path)
 # Executar a análise
 resultados = analyzer.run_analysis()
 
-# Salvar os resultados no arquivo .md
-save_results_to_md(resultados)
+# Salvar os resultados no arquivo .md e obter o caminho do arquivo gerado
+md_file_path = save_results_to_md(resultados)
 
 # Medir o tempo de término
 end_time = time.time()
@@ -79,6 +79,6 @@ execution_message = f"Total execution time: {int(minutes)} minutes and {int(seco
 # Imprimir o tempo total no console
 print(execution_message)
 
-# Adicionar o tempo de execução no final do arquivo .md
-with open("D:/OneDrive - InMotion - Consulting/AI Projects/AI-CAC-V1.2/LmStudio/lms_reports_md/report.md", "a", encoding='utf-8') as file:
-    file.write(f"\n{execution_message}")
+# Adicionar o tempo de execução no final do arquivo .md gerado
+with open(md_file_path, "a", encoding='utf-8') as file:
+    file.write(f"\n{execution_message}\n")
