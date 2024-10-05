@@ -188,7 +188,7 @@ class DbIntegration:
 
 if __name__ == "__main__":
     # Caminhos e diretórios
-    directory_with_jsons = "D:\\OneDrive - InMotion - Consulting\\AI Projects\\AI-CAC-V1.2\\data_reports_json"
+    directory_with_jsons = r"D:\OneDrive - InMotion - Consulting\AI Projects\AI-CAC-V1.2\data_reports_json"
 
     # Criar uma instância da classe DbIntegration
     db_integration = DbIntegration(directory_with_jsons)
