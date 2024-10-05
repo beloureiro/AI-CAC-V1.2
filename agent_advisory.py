@@ -1,13 +1,13 @@
 from crewai import Agent
-from utils import log_model_usage  # Agora importado do utils
+from utils import log_model_usage
 import yaml
 
-# Carregando a configuração do YAML
+# Loading configuration from YAML
 with open('config/local_llm.yaml', 'r') as file:
     config = yaml.safe_load(file)
 
 # Configurando o modelo Ollama
-llm_model = config['models']['lmstudio_meta_llama_3_1_8b_instruct']
+llm_model = config['models']['llama3_2_1b_instruct_q5_K_S']
 
 # Common stop sequences for all models
 #stop_sequences = ["\n# Agent:", "\n# Task:", "<|endoftext|>"]
@@ -37,13 +37,13 @@ patient_experience_agent = Agent(
 
 log_model_usage(patient_experience_agent)
 
-# Agent 2: Health & IT Process Expert with the validator tool integrated
+# Agent 2: Health & IT Process Expert
 process_expert_agent = Agent(
     role="Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
     goal=(
-        "Analyze the patient's feedback, map the patient’s journey strictly as described, and identify both positive aspects and inefficiencies, depending on the feedback. "
-        "Your analysis should be entirely based on the patient’s account, adapting to whether the feedback is positive, negative, or neutral. "
-        "Do not infer additional steps or details not mentioned in the feedback. Ensure that your analysis reflects the patient’s experience, regardless of whether it aligns with a typical process flow."
+        "Analyze the patient's feedback, map the patient's journey strictly as described, and identify both positive aspects and inefficiencies, depending on the feedback. "
+        "Your analysis should be entirely based on the patient's account, adapting to whether the feedback is positive, negative, or neutral. "
+        "Do not infer additional steps or details not mentioned in the feedback. Ensure that your analysis reflects the patient's experience, regardless of whether it aligns with a typical process flow."
     ),
     backstory="An expert in healthcare process management, IT optimization, and Business Process Model and Notation (BPMN).",
     llm=llm_model,
@@ -55,16 +55,16 @@ process_expert_agent = Agent(
         "1. Start by identifying the first event mentioned by the patient that initiated their experience (do not add any steps beyond what was provided).\n"
         "2. List each task or activity directly mentioned in the feedback, ensuring you strictly follow the patient's account.\n"
         "3. Identify decision points or key interactions that impacted the patient's experience (both positive and negative).\n"
-        "4. Ensure your analysis accurately reflects the patient’s specific journey, and avoid generalizing or introducing details that were not included in the feedback."
+        "4. Ensure your analysis accurately reflects the patient's specific journey, and avoid generalizing or introducing details that were not included in the feedback."
         "\nAdditionally, identify key takeaways depending on the nature of the feedback:\n"
         "- For **positive** feedback: Highlight the strengths in the process, focusing on aspects like care quality, friendliness, efficiency, etc.\n"
         "- For **negative** feedback: Identify inefficiencies, delays, miscommunications, or poor treatment as described, and specify where these occurred.\n"
         "- For **neutral** feedback: Look for areas of potential improvement and suggest ways to optimize the process, even if no major issues were reported."
         "\nProvide the output in the following format:\n"
         "Patient_Journey_Health_IT_Process_Expert:\n"
-        "- [First step as described in the patient’s feedback]\n"
+        "- [First step as described in the patient's feedback]\n"
         "- [Next steps only based on what the patient explicitly mentioned]\n"
-        "- [Additional steps relevant to the patient’s experience]\n"
+        "- [Additional steps relevant to the patient's experience]\n"
         "\nPositive Aspects (if applicable):\n"
         "- [Highlight any positive elements in the feedback]\n"
         "\nInefficiencies_Healthcare_Process_Health_IT_Process_Expert:\n"
@@ -83,7 +83,6 @@ process_expert_agent = Agent(
     cache=True,
     max_retry_limit=3
 )
-
 
 log_model_usage(process_expert_agent)
 
@@ -157,4 +156,3 @@ manager_agent = Agent(
 )
 
 log_model_usage(manager_agent)
-
