@@ -1,0 +1,47 @@
+{
+    "patient_feedback": "Unfortunately, the doctor did not appear during an ONLINE consultation.",
+    "total_execution_time": "5 minutes and 37 seconds",
+    "agents": [
+        {
+            "agent_name": "Patient Experience Expert",
+            "response": {
+                "Sentiment_Patient_Experience_Expert": "Negative",
+                "Emotional_Intensity_Patient_Experience_Expert": "-1",
+                "Urgency_Level_Patient_Experience_Expert": "High",
+                "Key_Issues_Patient_Experience_Expert": "- Doctor did not appear during the online consultation."
+            }
+        },
+        {
+            "agent_name": "Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
+            "response": {
+                "Patient_Journey_Health_IT_Process_Expert": "- Patient initiated online consultation.\n- Patient waited for the doctor to appear.\n- Doctor did not appear during the scheduled time.",
+                "Inefficiencies_Healthcare_Process_Health_IT_Process_Expert": "- The doctor failed to appear during the scheduled online consultation.",
+                "Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert": "- Implement a system to notify patients if a doctor is running late or unable to attend an online consultation.\n- Ensure proper communication channels are in place to inform patients of any unexpected disruptions."
+            }
+        },
+        {
+            "agent_name": "Clinical Psychologist",
+            "response": {
+                "Emotional_State_Clinical_Psychologist": "Negative (feeling of frustration, disappointment)",
+                "Support_Strategy_Clinical_Psychologist": "Addressing emotional concerns by validating the patient's feelings and providing reassurance.",
+                "Suggested_Approach_Clinical_Psychologist": "- Validate the patient’s feelings by acknowledging their frustration and disappointment regarding the doctor not appearing for the consultation.\n- Offer reassurance about the importance of the appointment and express genuine concern for their well-being.\n- Provide strategies to cope with delayed or canceled appointments, such as deep breathing exercises and positive self-talk.\n- Suggest alternative ways to manage emotions during stressful healthcare experiences, including keeping a journal or engaging in hobbies."
+            }
+        },
+        {
+            "agent_name": "Communication Expert",
+            "response": {
+                "Communication_Quality_Communication_Expert": "Poor",
+                "Issues_Identified_Communication_Expert": "- Doctor's absence during scheduled online consultation.",
+                "Suggested_Improvements_Communication_Expert": "- Implement strict adherence to appointment schedules for online consultations.\n- Establish clear protocols for handling unforeseen circumstances that may lead to doctor unavailability.\n- Develop a system for notifying patients promptly in case of cancellations or delays, offering alternative scheduling options whenever possible.",
+                "Final_Recommendation_Communication_Expert": "Prioritize reliable and dependable online consultation services by ensuring doctors are present during scheduled appointments and implementing robust communication strategies to manage unexpected disruptions."
+            }
+        },
+        {
+            "agent_name": "Manager and Advisor",
+            "response": {
+                "Key_Issues_Manager_and_Advisor": "- The doctor's absence during scheduled online consultation was identified as an issue.\n- This resulted in poor communication quality.",
+                "Recommendations_Manager_and_Advisor": "- Implement strict adherence to appointment schedules for online consultations to prevent similar instances of doctor unavailability.\n- Establish clear protocols for handling unforeseen circumstances that may lead to doctor unavailability and develop a system for notifying patients promptly, offering alternative scheduling options whenever possible."
+            }
+        }
+    ]
+}

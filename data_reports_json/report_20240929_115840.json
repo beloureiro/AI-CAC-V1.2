@@ -1,0 +1,47 @@
+{
+    "patient_feedback": "Zero empathy. It's the first time I've felt uncomfortable in a consultation.",
+    "total_execution_time": "4 minutes and 54 seconds",
+    "agents": [
+        {
+            "agent_name": "Patient Experience Expert",
+            "response": {
+                "Sentiment_Patient_Experience_Expert": "Negative",
+                "Emotional_Intensity_Patient_Experience_Expert": "-1",
+                "Urgency_Level_Patient_Experience_Expert": "High",
+                "Key_Issues_Patient_Experience_Expert": "- Lack of empathy in consultation\n- Feeling uncomfortable during the visit"
+            }
+        },
+        {
+            "agent_name": "Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
+            "response": {
+                "Patient_Journey_Health_IT_Process_Expert": "",
+                "Inefficiencies_Healthcare_Process_Health_IT_Process_Expert": "",
+                "Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert": ""
+            }
+        },
+        {
+            "agent_name": "Clinical Psychologist",
+            "response": {
+                "Emotional_State_Clinical_Psychologist": "Negative emotions, including feeling unvalued and discomfort due to perceived lack of empathy from the healthcare provider.",
+                "Support_Strategy_Clinical_Psychologist": "Develop a multi-faceted approach that includes psychological support for coping with distress caused by negative interactions in medical settings, as well as systemic changes within clinical practices to improve patient experiences and emotional safety during consultations.",
+                "Suggested_Approach_Clinical_Psychologist": ""
+            }
+        },
+        {
+            "agent_name": "Communication Expert",
+            "response": {
+                "Communication_Quality_Communication_Expert": "Poor",
+                "Issues_Identified_Communication_Expert": "- Lack of empathy demonstrated by the healthcare provider.",
+                "Suggested_Improvements_Communication_Expert": "- Healthcare providers should receive training on active listening and empathy techniques.\n- Implement strategies to encourage healthcare providers to acknowledge and validate patients' feelings.",
+                "Final_Recommendation_Communication_Expert": "Integrate empathy training and patient-centered communication skills into the onboarding and continuing education of all healthcare providers."
+            }
+        },
+        {
+            "agent_name": "Manager and Advisor",
+            "response": {
+                "Key_Issues_Manager_and_Advisor": "- Lack of empathy demonstrated by the healthcare provider.",
+                "Recommendations_Manager_and_Advisor": "- Healthcare providers should receive training on active listening and empathy techniques.\n- Implement strategies to encourage healthcare providers to acknowledge and validate patients' feelings."
+            }
+        }
+    ]
+}

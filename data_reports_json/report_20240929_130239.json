@@ -1,0 +1,47 @@
+{
+    "patient_feedback": "When I arrived at the medical center they informed me that the doctor was not going to come and no one informed me. A day before he had confirmed the visit. Terrible. Luckily, the staff at the medical center informed me of everything very kindly, but Doctoralia's service was very poor.",
+    "total_execution_time": "5 minutes and 57 seconds",
+    "agents": [
+        {
+            "agent_name": "Patient Experience Expert",
+            "response": {
+                "Sentiment_Patient_Experience_Expert": "Negative",
+                "Emotional_Intensity_Patient_Experience_Expert": "-1",
+                "Urgency_Level_Patient_Experience_Expert": "High",
+                "Key_Issues_Patient_Experience_Expert": "- Doctor unavailability without prior notice\n- Poor service from Doctoralia"
+            }
+        },
+        {
+            "agent_name": "Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
+            "response": {
+                "Patient_Journey_Health_IT_Process_Expert": "- The patient scheduled an appointment through Doctoralia.\n- Doctoralia confirmed the visit with the patient.\n- The patient arrived at the medical center.\n- The medical center staff informed the patient that the doctor was unavailable.",
+                "Inefficiencies_Healthcare_Process_Health_IT_Process_Expert": "- Doctor unavailability without prior notice to the patient.\n- Poor communication from Doctoralia, as they did not inform the patient about the doctor's absence.",
+                "Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert": "- Doctoralia should implement a system for real-time updates and notifications regarding doctor availability changes.\n- The medical center should have a protocol for informing patients promptly about doctor cancellations or unavailability, ideally through the same platform used for scheduling (Doctoralia in this case)."
+            }
+        },
+        {
+            "agent_name": "Clinical Psychologist",
+            "response": {
+                "Emotional_State_Clinical_Psychologist": "Frustrated, disappointed",
+                "Support_Strategy_Clinical_Psychologist": "Validate the patient's feelings of frustration and disappointment, emphasizing that their experience is understandable given the circumstances.",
+                "Suggested_Approach_Clinical_Psychologist": ""
+            }
+        },
+        {
+            "agent_name": "Communication Expert",
+            "response": {
+                "Communication_Quality_Communication_Expert": "Poor",
+                "Issues_Identified_Communication_Expert": "- Lack of notification about doctor's absence.\n- Inconsistent communication between Doctoralia and the medical center.",
+                "Suggested_Improvements_Communication_Expert": "- Implement a reliable system for notifying patients in advance if a doctor is unavailable.\n- Establish clear communication protocols between Doctoralia and the medical center to ensure accurate and timely information sharing.",
+                "Final_Recommendation_Communication_Expert": "Doctoralia should prioritize improving its communication channels and reliability to prevent similar situations from occurring in the future."
+            }
+        },
+        {
+            "agent_name": "Manager and Advisor",
+            "response": {
+                "Key_Issues_Manager_and_Advisor": "- Issue with communication quality and reliability.\n- Inconsistent communication between Doctoralia and the medical center.",
+                "Recommendations_Manager_and_Advisor": "- Implement a reliable system for notifying patients in advance if a doctor is unavailable, ensuring timely and accurate information sharing to prevent similar situations from occurring.\n- Establish clear communication protocols between Doctoralia and the medical center to ensure seamless coordination of patient appointments and updates."
+            }
+        }
+    ]
+}

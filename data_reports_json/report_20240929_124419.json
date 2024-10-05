@@ -1,0 +1,47 @@
+{
+    "patient_feedback": "Disastrous Lack of empathy, closeness, kindness and professionalism, a waste of money.",
+    "total_execution_time": "8 minutes and 42 seconds",
+    "agents": [
+        {
+            "agent_name": "Patient Experience Expert",
+            "response": {
+                "Sentiment_Patient_Experience_Expert": "Negative",
+                "Emotional_Intensity_Patient_Experience_Expert": "-1",
+                "Urgency_Level_Patient_Experience_Expert": "High",
+                "Key_Issues_Patient_Experience_Expert": "- Lack of empathy, closeness, kindness and professionalism\n- Waste of money"
+            }
+        },
+        {
+            "agent_name": "Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
+            "response": {
+                "Patient_Journey_Health_IT_Process_Expert": "- Patient initiated contact with healthcare provider.\n- Patient experienced lack of empathy, closeness, kindness and professionalism from staff.\n- Patient concluded the interaction feeling their money was wasted.",
+                "Inefficiencies_Healthcare_Process_Health_IT_Process_Expert": "- Lack of empathy, closeness, kindness, and professionalism exhibited by staff throughout the interaction.",
+                "Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert": "- Implement mandatory training programs for all staff on patient communication, empathy, and professionalism.\n- Develop a system for collecting and addressing patient feedback to identify and rectify recurring issues related to staff conduct.\n- Review compensation and incentive structures to ensure they align with providing exceptional patient experiences."
+            }
+        },
+        {
+            "agent_name": "Clinical Psychologist",
+            "response": {
+                "Emotional_State_Clinical_Psychologist": "**Patient feels frustrated, dissatisfied, and undervalued due to perceived lack of empathy, kindness, professionalism, and closeness from staff. They also feel their money was wasted, indicating feelings of injustice or unfairness.**",
+                "Support_Strategy_Clinical_Psychologist": "To address the patient's emotional concerns and improve their well-being, it's crucial to validate their feelings, apologize for the shortcomings they experienced, and outline steps being taken to rectify these issues.",
+                "Suggested_Approach_Clinical_Psychologist": ""
+            }
+        },
+        {
+            "agent_name": "Communication Expert",
+            "response": {
+                "Communication_Quality_Communication_Expert": "Poor",
+                "Issues_Identified_Communication_Expert": "- Lack of empathy\n- Absence of kindness and professionalism",
+                "Suggested_Improvements_Communication_Expert": "- Implement mandatory training programs for staff on empathy, active listening, and compassionate communication.\n- Establish clear guidelines and expectations for professional conduct and patient interaction.",
+                "Final_Recommendation_Communication_Expert": "A comprehensive review and overhaul of the communication strategies employed by the healthcare team is necessary to foster a more empathetic, patient-centered environment."
+            }
+        },
+        {
+            "agent_name": "Manager and Advisor",
+            "response": {
+                "Key_Issues_Manager_and_Advisor": "- Lack of empathy\n- Absence of kindness and professionalism",
+                "Recommendations_Manager_and_Advisor": "- Implement mandatory training programs for staff on empathy, active listening, and compassionate communication.\n- Establish clear guidelines and expectations for professional conduct and patient interaction."
+            }
+        }
+    ]
+}

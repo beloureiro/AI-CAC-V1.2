@@ -1,0 +1,47 @@
+{
+    "patient_feedback": "I don't understand this doctor. I think it is a problem with the language.",
+    "total_execution_time": "4 minutes and 28 seconds",
+    "agents": [
+        {
+            "agent_name": "Patient Experience Expert",
+            "response": {
+                "Sentiment_Patient_Experience_Expert": "Negative",
+                "Emotional_Intensity_Patient_Experience_Expert": "0",
+                "Urgency_Level_Patient_Experience_Expert": "Medium",
+                "Key_Issues_Patient_Experience_Expert": "- Communication issues with doctor due to language barrier\n- Patient's understanding of their condition was compromised"
+            }
+        },
+        {
+            "agent_name": "Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
+            "response": {
+                "Patient_Journey_Health_IT_Process_Expert": "- Patient arrives at doctor's appointment.\n- Patient interacts with doctor.\n- Patient expresses not understanding the doctor.",
+                "Inefficiencies_Healthcare_Process_Health_IT_Process_Expert": "- Inefficient communication due to language barrier between patient and doctor.",
+                "Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert": "- Provide interpreter services for patients who require language assistance during appointments."
+            }
+        },
+        {
+            "agent_name": "Clinical Psychologist",
+            "response": {
+                "Emotional_State_Clinical_Psychologist": "- Assess communication needs of non-native speakers.\n- Train healthcare providers in cultural sensitivity to enhance patient rapport.\n- Proactively offer interpreter service during initial consultations, reducing assumptions about language proficiency and improving overall doctor-patient interactions for a more positive emotional experience.",
+                "Support_Strategy_Clinical_Psychologist": "",
+                "Suggested_Approach_Clinical_Psychologist": ""
+            }
+        },
+        {
+            "agent_name": "Communication Expert",
+            "response": {
+                "Communication_Quality_Communication_Expert": "Poor",
+                "Issues_Identified_Communication_Expert": "- Language barrier hindering understanding between patient and doctor.",
+                "Suggested_Improvements_Communication_Expert": "- Provide interpreter services for patients who require them.\n- Ensure medical staff are trained in basic communication strategies for patients with limited English proficiency.",
+                "Final_Recommendation_Communication_Expert": "Implement interpreter services and provide cultural competence training to medical staff to improve patient understanding and ensure effective communication."
+            }
+        },
+        {
+            "agent_name": "Manager and Advisor",
+            "response": {
+                "Key_Issues_Manager_and_Advisor": "- Language barrier hindering understanding between patient and doctor.",
+                "Recommendations_Manager_and_Advisor": "- Implement interpreter services for patients who require them.\n- Ensure medical staff are trained in basic communication strategies for patients with limited English proficiency."
+            }
+        }
+    ]
+}

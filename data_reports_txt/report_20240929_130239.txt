@@ -1,0 +1,77 @@
+############################
+# AI Clinical Advisory Crew Report
+############################
+
+Patient Feedback: When I arrived at the medical center they informed me that the doctor was not going to come and no one informed me. A day before he had confirmed the visit. Terrible. Luckily, the staff at the medical center informed me of everything very kindly, but Doctoralia's service was very poor.
+
+############################
+# Agent: Patient Experience Expert
+## Final Answer:
+Sentiment_Patient_Experience_Expert: Negative
+Emotional_Intensity_Patient_Experience_Expert: -1
+Urgency_Level_Patient_Experience_Expert: High
+Key_Issues_Patient_Experience_Expert:
+- Doctor unavailability without prior notice
+- Poor service from Doctoralia
+
+############################
+# Agent: Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)
+## Final Answer:
+Patient_Journey_Health_IT_Process_Expert:
+- The patient scheduled an appointment through Doctoralia. 
+- Doctoralia confirmed the visit with the patient.
+-  The patient arrived at the medical center.
+- The medical center staff informed the patient that the doctor was unavailable.
+
+Positive Aspects (if applicable):
+-  The medical center staff were kind and informative.
+
+Inefficiencies_Healthcare_Process_Health_IT_Process_Expert:
+- Doctor unavailability without prior notice to the patient.
+- Poor communication from Doctoralia, as they did not inform the patient about the doctor's absence. 
+
+Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert:
+- Doctoralia should implement a system for real-time updates and notifications regarding doctor availability changes.
+-  The medical center should have a protocol for informing patients promptly about doctor cancellations or unavailability, ideally through the same platform used for scheduling (Doctoralia in this case).
+
+############################
+# Agent: Clinical Psychologist
+## Final Answer:
+Emotional_State_Clinical_Psychologist: Frustrated, disappointed
+Support_Strategy_Clinical_Psychologist: Validate the patient's feelings of frustration and disappointment, emphasizing that their experience is understandable given the circumstances.  
+Suggested_Approach_Clinical_Psychologist:
+- Acknowledge and reflect back the patient's emotions: "It sounds like you are feeling very frustrated and disappointed that your appointment had to be cancelled without prior notice." 
+- Offer reassurance and support: "I understand how inconvenient this must be, and I want to assure you that we will do our best to help find a solution."
+- Collaboratively explore options for rescheduling the appointment:  "Let's see what options are available for rescheduling your appointment. Would you prefer to try booking with the same doctor or would you like to consider seeing another provider?"
+
+############################
+# Agent: Communication Expert
+## Final Answer:
+Communication_Quality_Communication_Expert: Poor
+Issues_Identified_Communication_Expert:
+-  Lack of notification about doctor's absence.
+- Inconsistent communication between Doctoralia and the medical center.
+Suggested_Improvements_Communication_Expert:
+- Implement a reliable system for notifying patients in advance if a doctor is unavailable. 
+- Establish clear communication protocols between Doctoralia and the medical center to ensure accurate and timely information sharing.
+Final_Recommendation_Communication_Expert:  Doctoralia should prioritize improving its communication channels and reliability to prevent similar situations from occurring in the future.
+
+############################
+# Agent: Manager and Advisor
+## Final Answer:
+Key_Issues_Manager_and_Advisor:
+- Issue with communication quality and reliability.
+- Inconsistent communication between Doctoralia and the medical center.
+Recommendations_Manager_and_Advisor:
+- Implement a reliable system for notifying patients in advance if a doctor is unavailable, ensuring timely and accurate information sharing to prevent similar situations from occurring.
+- Establish clear communication protocols between Doctoralia and the medical center to ensure seamless coordination of patient appointments and updates.
+
+Total execution time: 5 minutes and 57 seconds.
+############################
+# Consolidated Final Report
+############################
+
+Disclaimer
+The analyses in this report were conducted by different LLM models in training mode, which take patient feedback as absolute truth. Feedback reflects the patient's individual perception and, in some cases, may not capture the full complexity of the situation, including institutional and contextual factors.
+AI Clinical Advisory Crew framework, beyond providing technical analyses, acts as a strategic driver, steering managerial decisions across various operational areas.
+The reader is responsible for validating the feasibility of the suggested actions and their alignment with stakeholder objectives.

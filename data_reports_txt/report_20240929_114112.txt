@@ -1,0 +1,70 @@
+############################
+# AI Clinical Advisory Crew Report
+############################
+
+Patient Feedback: I don't understand this doctor. I think it is a problem with the language.
+
+############################
+# Agent: Patient Experience Expert
+## Final Answer:
+Sentiment_Patient_Experience_Expert: Negative
+Emotional_Intensity_Patient_Experience_Expert: 0
+Urgency_Level_Patient_Experience_Expert: Medium
+Key_Issues_Patient_Experience_Expert:
+- Communication issues with doctor due to language barrier
+- Patient's understanding of their condition was compromised
+
+############################
+# Agent: Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)
+## Final Answer:
+Patient_Journey_Health_IT_Process_Expert:
+- Patient arrives at doctor's appointment.
+- Patient interacts with doctor.
+- Patient expresses not understanding the doctor.
+
+Positive Aspects (if applicable):
+- No positive aspects mentioned.
+
+Inefficiencies_Healthcare_Process_Health_IT_Process_Expert:
+- Inefficient communication due to language barrier between patient and doctor. 
+
+Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert:
+- Provide interpreter services for patients who require language assistance during appointments.
+
+############################
+# Agent: Clinical Psychologist
+## Final Answer:
+Emotional_State_Clinical_Psychologist: Negative due to language barrier misunderstandings; Support Strategy_Clinical_Psychologist: Implement interpreter services and cultural competence training for medical staff Suggested Approach_Clinical_Psychologist:
+- Assess communication needs of non-native speakers.
+- Train healthcare providers in cultural sensitivity to enhance patient rapport.
+- Proactively offer interpreter service during initial consultations, reducing assumptions about language proficiency and improving overall doctor-patient interactions for a more positive emotional experience.
+
+############################
+# Agent: Communication Expert
+## Final Answer:
+Communication_Quality_Communication_Expert: Poor
+Issues_Identified_Communication_Expert:
+-  Language barrier hindering understanding between patient and doctor. 
+Suggested_Improvements_Communication_Expert:
+-  Provide interpreter services for patients who require them.
+-  Ensure medical staff are trained in basic communication strategies for patients with limited English proficiency.
+Final_Recommendation_Communication_Expert:  Implement interpreter services and provide cultural competence training to medical staff to improve patient understanding and ensure effective communication.
+
+############################
+# Agent: Manager and Advisor
+## Final Answer:
+Key_Issues_Manager_and_Advisor:
+- Language barrier hindering understanding between patient and doctor.
+Recommendations_Manager_and_Advisor:
+- Implement interpreter services for patients who require them.
+- Ensure medical staff are trained in basic communication strategies for patients with limited English proficiency.
+
+Total execution time: 4 minutes and 28 seconds.
+############################
+# Consolidated Final Report
+############################
+
+Disclaimer
+The analyses in this report were conducted by different LLM models in training mode, which take patient feedback as absolute truth. Feedback reflects the patient's individual perception and, in some cases, may not capture the full complexity of the situation, including institutional and contextual factors.
+AI Clinical Advisory Crew framework, beyond providing technical analyses, acts as a strategic driver, steering managerial decisions across various operational areas.
+The reader is responsible for validating the feasibility of the suggested actions and their alignment with stakeholder objectives.

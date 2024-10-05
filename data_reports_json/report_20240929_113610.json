@@ -1,0 +1,47 @@
+{
+    "patient_feedback": "Since my daughter has started treatment with her, there have been two canceled appointments and three delays of more than an hour.\nThus it is impossible to obtain effectiveness and continuity in a treatment.\nI do not dispute that you have reasons to be absent, but if your attendance or availability at work is not possible, you should think about reorganizing your appointments.\nVery disappointed with the service of this professional, who has not given me time to get to know her way of working or the quality of it.",
+    "total_execution_time": "4 minutes and 45 seconds",
+    "agents": [
+        {
+            "agent_name": "Patient Experience Expert",
+            "response": {
+                "Sentiment_Patient_Experience_Expert": "Negative",
+                "Emotional_Intensity_Patient_Experience_Expert": "-0.8",
+                "Urgency_Level_Patient_Experience_Expert": "High",
+                "Key_Issues_Patient_Experience_Expert": "- Cancelled appointments and delays in treatment sessions\n- Lack of continuity and effectiveness in treatment due to scheduling issues"
+            }
+        },
+        {
+            "agent_name": "Health & IT Process Expert with expertise in Business Process Model and Notation (BPMN)",
+            "response": {
+                "Patient_Journey_Health_IT_Process_Expert": "- Patient schedules appointment with healthcare professional.\n- Appointment is canceled by the healthcare professional.\n- Patient reschedules appointment.\n- Appointment is delayed by more than an hour.\n- Patient attends delayed appointment.\n- This cycle repeats three times (two cancellations and three delays).",
+                "Inefficiencies_Healthcare_Process_Health_IT_Process_Expert": "- Frequent appointment cancellations by the healthcare professional.\n- Repeated significant delays in treatment sessions exceeding one hour.",
+                "Improvement_Suggestions_Healthcare_Process_Health_IT_Process_Expert": "- Implement a system to minimize appointment cancellations and notify patients promptly of any changes.\n- Analyze scheduling practices to identify and address the root causes of excessive delays.\n- Explore options for alternative appointment scheduling methods or staffing adjustments to improve availability and reduce wait times."
+            }
+        },
+        {
+            "agent_name": "Clinical Psychologist",
+            "response": {
+                "Emotional_State_Clinical_Psychologist": "Frustrated/Stressed/Anxious due to repeated appointment disruptions.",
+                "Support_Strategy_Clinical_Psychologist": "Implement stress management techniques, establish a communication plan with healthcare providers for more reliable scheduling and timely updates on appointments, provide psychoeducation about coping strategies during unforeseen delays or cancellations.",
+                "Suggested_Approach_Clinical_Psychologist": "- Initiate a discussion with the patient to validate their feelings regarding repeated disruptions and reassure them that these emotions are understandable given their circumstances, thus establishing trust through empathy (Step 1).\n- Collaborate with healthcare providers or administrators to develop a more reliable appointment system. This could include implementing an automated notification system for changes in the patient's schedule and offering alternative time slots as options when conflicts arise (Step 2 if necessary, otherwise proceed directly to Step 3).\n- Introduce stress reduction techniques such as deep breathing exercises or mindfulness meditation that patients can use during moments of waiting. Provide resources like apps or handouts on these practices for them to practice independently at home and before appointments (Step 4, potentially expandable with additional steps if needed).\n- Educate the patient about setting healthy boundaries in their care journey; this includes advocating effectively when they need changes made by medical staff. Empowerment through knowledge can help mitigate feelings of helplessness and build resilience against future disruptions (Step 5, with possible additional steps like role-playing scenarios or creating a personal action plan).\n  These approaches are designed to address the emotional impact directly by validating patient experiences, enhancing communication systems between healthcare providers and patients for more predictable scheduling, equipping the patient with stress management tools they can access independently of their clinical environment, and empowering them through education on advocacy within a medical setting. The goal is to minimize emotional distress while promoting self-efficacy in navigating challenges associated with healthcare appointments."
+            }
+        },
+        {
+            "agent_name": "Communication Expert",
+            "response": {
+                "Communication_Quality_Communication_Expert": "Poor",
+                "Issues_Identified_Communication_Expert": "- Frequent appointment cancellations and delays, leading to disruption in treatment continuity.\n- Lack of proactive communication from the provider regarding scheduling issues.",
+                "Suggested_Improvements_Communication_Expert": "- Implement a system for notifying patients as early as possible about any appointment changes or cancellations.\n- Offer alternative appointment times when possible to minimize inconvenience.",
+                "Final_Recommendation_Communication_Expert": "The provider should prioritize reliable scheduling and transparent communication with patients to build trust and ensure effective treatment delivery."
+            }
+        },
+        {
+            "agent_name": "Manager and Advisor",
+            "response": {
+                "Key_Issues_Manager_and_Advisor": "- Frequent appointment cancellations and delays, leading to disruption in treatment continuity.\n- Lack of proactive communication from the provider regarding scheduling issues.",
+                "Recommendations_Manager_and_Advisor": "- Implement a system for notifying patients as early as possible about any appointment changes or cancellations.\n- Offer alternative appointment times when possible to minimize inconvenience."
+            }
+        }
+    ]
+}
