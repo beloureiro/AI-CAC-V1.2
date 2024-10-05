@@ -35,7 +35,8 @@ def execute_agents(tasks_output):
 
 
 def save_consolidated_report(patient_feedback, tasks_output, total_duration):
-    file_name = f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+    directory = r"D:\OneDrive - InMotion - Consulting\AI Projects\AI-CAC-V1.2\data_reports_txt"
+    file_name = f"{directory}\\report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     with open(file_name, "w", encoding='utf-8') as report_file:
         report_file.write("############################\n")
         report_file.write("# AI Clinical Advisory Crew Report\n")
@@ -61,7 +62,8 @@ def save_consolidated_report(patient_feedback, tasks_output, total_duration):
 
 
 def save_agent_results_as_json(patient_feedback, tasks_output, total_duration):
-    file_name = f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    directory = r"D:\OneDrive - InMotion - Consulting\AI Projects\AI-CAC-V1.2\data_reports_json"
+    file_name = f"{directory}\\report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     report_data = {
         "patient_feedback": patient_feedback,
         "total_execution_time": f"{int(total_duration // 60)} minutes and {int(total_duration % 60)} seconds",

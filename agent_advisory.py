@@ -1,5 +1,5 @@
 from crewai import Agent
-from config_ollama import llama3_2_3b_instruct_q5_K_S
+from config_ollama import llama3_2_3b_instruct_q5_K_S, llama3_2_1b_instruct_q5_K_S
 from utils import log_model_usage  # Agora importado do utils
 #from .agent_tools import HealthITProcessExpertOutputValidatorTool, ClinicalPsychologistOutputValidatorTool, HealthITProcessExpertAgent
 
@@ -9,7 +9,7 @@ from utils import log_model_usage  # Agora importado do utils
 # Ajuste sugerido para stop sequences
 stop_sequences = ["<|endoftext|>"]
 
-llm_model=llama3_2_3b_instruct_q5_K_S
+llm_model=llama3_2_1b_instruct_q5_K_S
 
 # Agent 1: Patient Experience Expert
 patient_experience_agent = Agent(
