@@ -1,26 +1,30 @@
 import requests
 import json
+import yaml
 
-# Defina o endpoint do LM Studio
-url = "http://127.0.0.1:1234/v1/completions"
+# Carregar as configurações do arquivo YAML
+with open("config/local_llm.yaml", "r") as file:
+    config = yaml.safe_load(file)
 
-# Defina os parâmetros da solicitação
+# Definir o endpoint e os parâmetros a partir do YAML
+url = config['server']['url']
+
 payload = {
-    "model": "meta-llama-3.1-8b-instruct",  # Nome do modelo fornecido
-    "prompt": "Explique a teoria da relatividade de forma simples.",
-    "max_tokens": 250,  # Defina o número máximo de tokens na resposta
-    "temperature": 0  # Controle de aleatoriedade na geração de texto
+    "model": config['request']['model'],
+    "prompt": config['request']['prompt'],
+    "max_tokens": config['request']['max_tokens'],
+    "temperature": config['request']['temperature']
 }
 
-# Defina os cabeçalhos da solicitação
+# Definir os cabeçalhos da solicitação
 headers = {
     "Content-Type": "application/json"
 }
 
-# Faça a solicitação POST
+# Fazer a solicitação POST
 response = requests.post(url, headers=headers, data=json.dumps(payload))
 
-# Verifique o status da resposta
+# Verificar o status da resposta
 if response.status_code == 200:
     completion = response.json()
     print("Resposta do modelo:", completion['choices'][0]['text'])
