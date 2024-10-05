@@ -1,4 +1,9 @@
 import os
+import os
+from openai import OpenAI # version 1.0+
+# if you get openai errors, run pip install --upgrade openai
+
+llm = "http://localhost:1234/v1"  # see chapter 1 video 3
 
 # Set a dummy OpenAI API key (required for initialization, even if not used)
 os.environ["OPENAI_API_KEY"] = "sk-proj-111"
